@@ -1,0 +1,6 @@
+pat_num,claim,status
+111222,123,accepted
+111333,234,accepted
+222444,432,rejected
+3444555,431,rejected
+4666777,65,accpted
