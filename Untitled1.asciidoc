@@ -1,0 +1,35 @@
++*In[30]:*+
+[source, ipython3]
+----
+import pandas as pd
+import numpy as np
+
+#import matplotlib.pyplot as plt
+#%matplotlib inline
+
+df = pd.DataFrame({'year':[2001,2002,2003,2004,2005],'price':[11,13,None,14,17]})
+df = df.fillna(method='ffill',axis=0).fillna(0)
+total_cells = np.product(df.shape)
+print(f"total cells = {total_cells}")
+#df
+
+----
+
+
++*Out[30]:*+
+----
+total cells = 10
+----
+
+
++*In[31]:*+
+[source, ipython3]
+----
+df.plot.bar('year','price',title='Dem 1',fontsize=13);
+----
+
+
++*Out[31]:*+
+----
+![png](output_1_0.png)
+----
